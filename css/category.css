@@ -1,0 +1,38 @@
+.category-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 4px;
+    border-radius: 5px;
+    width: 180px;
+    text-decoration: none;
+}
+
+.category-item span {
+    text-align: center;
+}
+
+.pagination-category {
+    display: flex;
+    margin-top: 10px;
+}
+
+.container-category {
+    width: 1100px;
+    margin: 0px auto;
+}
+
+@media screen and (max-width: 1100px) {
+    .container-category {
+        width: 545px;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .container-category {
+        width: 250px;
+    }
+    .pagination-category {
+        justify-content: center;
+    }
+}

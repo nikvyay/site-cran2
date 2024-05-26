@@ -1,0 +1,134 @@
+.delete-item-btn {
+    color: #f00;
+    border: medium none;
+    background-color: transparent;
+    font-size: 1.5em;
+}
+
+.table-product {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.table-product-img {
+    display: flex;
+    height: 64px;
+}
+
+.table-product-p {
+    margin: 0px;
+    margin-left: 12px;
+    text-align: start;
+}
+
+
+.table-delete-item {
+    text-align: end !important;
+}
+
+table,
+thead,
+tr,
+tbody,
+th,
+td {
+  text-align: center;
+}
+
+.table td {
+  text-align: center;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.card-end-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+
+
+
+
+.table-item-mobile {
+    margin-bottom: 16px;
+}
+
+.table-product-mobile {
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.table-product-mobile a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+.table-product-p-mobile {
+    margin: 0px;
+    margin-left: 12px;
+    text-align: start;
+    font-weight: bold;
+}
+
+.table-product-data {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+.table-product-data p {
+    width: 100px;
+}
+
+.table-mobile {
+    display: none;
+}
+
+.table-delete-item-mobile {
+    margin: 16px 0px;
+    margin-left: auto;
+    display: none;
+}
+
+@media screen and (max-width: 700px) { 
+    .table {
+        display: none;
+    }
+
+    .table-mobile {
+        display: block;
+    }
+
+    .table-delete-item-mobile {
+        display: flex;
+    }
+}
+
+.card-quantity-action {
+    font-size: 1.5em;
+    margin: 0px 6px;
+    color: gray;
+    cursor: pointer;
+    position: relative;
+    transform: translateY(-25%);
+}
+
+.card-quantity-action-d {
+    font-size: 1.5em;
+    margin: 0px 6px;
+    color: gray;
+    cursor: pointer;
+}

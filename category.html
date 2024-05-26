@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог - компания Кран</title>
+  <link rel="icon" type="image/x-icon" href="file/favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/category.css" rel="stylesheet">
+  <script src="js/card-icon.js"></script>
+  <script src="js/scroll-top.js" defer></script>
+  <script src="js/chat-bot.js" defer></script>
+</head>
+
+<body onload="updateCardIcon()">
+  <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+    ↑
+  </button>
+  <div class="chatbot-icon-container">
+    <img src="file/icon-chatbot.svg" alt="" onclick="showDialog()">
+  </div>
+  <div class="chatbot-container" style="display: none;">
+    <div class="chatbot-header-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="339" height="86" viewBox="0 0 339 86" fill="none">
+        <path
+          d="M54.5 61.5C16.9 61.5 14.3333 86 -0.5 86C-16 68.3333 -37.5 20.6999 -37.5 -18.5001C-37.5 -67.5001 70 -18.5001 235.5 -18.5001C367.9 -18.5001 358.667 30 337.5 64C274.167 64 92.1 61.5 54.5 61.5Z"
+          fill="#7BD85B" />
+      </svg>
+      <p class="chatbot-header-title">Задайте интересующий вопрос.</p>
+      <button class="chatbot-header-close" type="button" onclick="closeDialog()">×</button>
+    </div>
+    <div class="chatbot-content-container">
+
+    </div>
+    <div class="chatbot-input-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="339" height="101" viewBox="0 0 339 101" fill="none"
+        style="position: absolute; bottom: -12px;">
+        <path
+          d="M57.928 26.9683C16.6792 26.9683 13.8634 0 -2.4094 0C-19.4136 19.4465 -43 71.8789 -43 115.028C-43 168.965 74.9322 115.028 256.493 115.028C401.741 115.028 391.612 61.6419 368.391 24.2164C298.912 24.2164 99.1768 26.9683 57.928 26.9683Z"
+          fill="#7BD85B" />
+      </svg>
+      <input type="text" class="chatbot-input" placeholder="Введите вопрос">
+      <img src="file/icon-send.svg" alt="" class="chatbot-input-send" onclick="sendMessage()">
+    </div>
+  </div>
+  <header class="p-3 text-bg-dark">
+    <div class="header-main container">
+      <div class="header-category">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle header-category-button" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="file/icon-burger-menu.svg" alt="" class="header-category-button">
+            <span class="text-light" header-category-button>Категории</span>
+          </button>
+
+          <div class="header-category-contaier dropdown-menu">
+            <div class="header-category-row">
+              <a class="dropdown-item header-category-item" href="catalog.html?special-equipment#1">
+                <img src="file/category-special-equipment.png" alt="Спецтехника образец" class="header-category-item">
+                <span class="header-category-item">Спецтехника</span>
+              </a>
+              <a class="dropdown-item header-category-item" href="catalog.html?special-attachments#1">
+                <img src="file/category-attachments.png" alt="Навесное оборудование образец"
+                  class="header-category-item">
+                <span class="header-category-item">Навесное оборудование</sapn>
+              </a>
+            </div>
+            <div class="header-category-row">
+              <a class="dropdown-item header-category-item" href="catalog.html?road-equipment#1">
+                <img src="file/category-road-equipment.png" alt="Дорожное оснащение образец"
+                  class="header-category-item">
+                <span class="header-category-item">Дорожное оснащение</span>
+              </a>
+              <a class="dropdown-item header-category-item" href="catalog.html?materials#1">
+                <img src="file/category-materials.png" alt="Материалы оборудование образец"
+                  class="header-category-item">
+                <span class="header-category-item">Материалы</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="index.html" class="header-link-home">
+        <img src="file/logo.svg" alt="логотип" class="header-logo">
+      </a>
+      <a href="cart.html" class="header-link-card header-card">
+        <img src="file/icon-card.svg" alt="корзина" class="header-card">
+      </a>
+    </div>
+    <nav class="navbar navbar-dark bg-dark header-menu" aria-label="First navbar example">
+      <div class="container-fluid">
+        <button class="navbar-toggler header-navbar-toggler-mobile" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample01">
+          <ul class="navbar-nav me-auto mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="category.html">Каталог</a>
+            </li>
+            <ul class="me-auto mb-2 sub-list">
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html?special-equipment#1">Спецтехника</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html?special-attachments#1">Навесное оборудование</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html?road-equipment#1">Дорожное оснащение</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html?materials#1">Материалы</a>
+              </li>
+            </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar-expand-md navbar-dark navbar-main">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-md-center">
+          <ul class="navbar-nav">
+            <li class="nav-item nav-item-padding">
+              <a class="nav-link" href="category.html">Весь каталог</a>
+            </li>
+            <li class="nav-item nav-item-padding">
+              <a class="nav-link" href="about-us.html">О нас</a>
+            </li>
+            <li class="nav-item nav-item-padding">
+              <a class="nav-link" href="contact.html">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-xl p-3">
+    <nav class="breadcrumb-main">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+      </ol>
+    </nav>
+    <div>
+      <div class="row justify-content-center">
+        <a class="category-item text-black" href="catalog.html?special-equipment#1">
+          <img src="file/category-special-equipment-xl.png" alt="Спецтехника образец" class="header-category-item">
+          <span class="header-category-item">Спецтехника</span>
+        </a>
+        <a class="category-item text-black" href="catalog.html?special-attachments#1">
+          <img src="file/category-attachments-xl.png" alt="Навесное оборудование образец" class="header-category-item">
+          <span class="header-category-item">Навесное оборудование</sapn>
+        </a>
+      </div>
+      <div class="row justify-content-center">
+        <a class="category-item text-black" href="catalog.html?road-equipment#1">
+          <img src="file/category-road-equipment-xl.png" alt="Дорожное оснащение образец" class="header-category-item">
+          <span class="header-category-item">Дорожное оснащение</span>
+        </a>
+        <a class="category-item text-black" href="catalog.html?materials#1">
+          <img src="file/category-materials-xl.png" alt="Материалы оборудование образец" class="header-category-item">
+          <span class="header-category-item">Материалы</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-5 bg-dark text-white btn-outline-light form-white container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-6 col-md-2 mb-3 footer-item">
+        <h5>Информация</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-light">Главаня</a></li>
+          <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-light">Контакты</a></li>
+          <li class="nav-item mb-2"><a href="about-us.html" class="nav-link p-0 text-light">О нас</a></li>
+          <li class="nav-item mb-2"><a href="cart.html" class="nav-link p-0 text-light">Корзина</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3 footer-item">
+        <h5>Каталог</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="category-special-equipment.html"
+              class="nav-link p-0 text-light">Спецтехника</a></li>
+          <li class="nav-item mb-2"><a href="category-attachments.html" class="nav-link p-0 text-light">Навесное
+              оборудование</a></li>
+          <li class="nav-item mb-2"><a href="category-road-equipment.html" class="nav-link p-0 text-light">Дорожное
+              оборудование</a></li>
+          <li class="nav-item mb-2"><a href="category-materials.html" class="nav-link p-0 text-light">Материалы</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3 footer-item">
+        <h5>Контатная информация</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="tel: +79109208296" class="nav-link p-0 text-light">Телефон:
+              +79109208296</a></li>
+          <li class="nav-item mb-2"><a href="mailto: market@info-sst.ru"
+              class="nav-link p-0 text-light">market@info-sst.ru</a></li>
+          <li class="nav-item mb-2 inline">
+            <a href="https://vk.com/" class="nav-link p-1 text-light">
+              <img src="file/vk-c.svg" alt="" class="footer-vk-icon">
+            </a>
+            <a href="https://www.youtube.com/" class="nav-link p-1 text-light">
+              <img src="file/youtube-c.svg" alt="" class="footer-youtube-icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3 footer-item">
+        <h5>Скачать наше приложение</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="https://www.apple.com/ru/app-store/" class="nav-link p-0 text-light">
+              <img src="file/app-store.svg" alt="" class="app-store">
+            </a></li>
+          <li class="nav-item mb-2"><a href="https://play.google.com/store/games?hl=ru&gl=US"
+              class="nav-link p-0 text-light">
+              <img src="file/google-play.svg" alt="" class="google-play">
+            </a></li>
+        </ul>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>&copy; ТСК «Велес», 2013—2023</p>
+        <a href="#" class="nav-link p-0 text-light">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
